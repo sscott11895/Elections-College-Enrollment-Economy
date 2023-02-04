@@ -1,0 +1,9 @@
+President Name,Party,Start_Year,End_Year,color,is_demo
+George W. Bush,"Republican
+",2001-01-01,2008-01-01,red,0
+Barack Obama,"Democratic
+",2009-01-01,2016-01-01,blue,1
+Donald Trump,"Republican
+",2017-01-01,2020-01-01,red,0
+Joe Biden,"Democratic
+",2021-01-01,2024-01-01,blue,1
