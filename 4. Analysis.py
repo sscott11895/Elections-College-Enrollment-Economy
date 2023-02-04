@@ -6,36 +6,6 @@ Created on Mon Oct 24 22:23:52 2022
 Code created by: Olivia Gunther, Sarah Lueling, Sarah Scott
 """
 
-# citations
-# https://www.geeksforgeeks.org/create-a-pandas-dataframe-from-lists/
-# https://en.wikipedia.org/wiki/List_of_presidents_of_the_United_States
-# https://www.geeksforgeeks.org/create-a-pandas-dataframe-from-lists/
-# https://www.geeksforgeeks.org/iterate-over-a-list-in-python/
-# https://bobbyhadz.com/blog/python-remove-everything-after-character
-# https://stackoverflow.com/questions/19469697/return-multiple-lists-in-python-function
-# https://www.geeksforgeeks.org/creating-a-pandas-dataframe-using-list-of-tuples/
-# https://stackoverflow.com/questions/19961490/construct-pandas-dataframe-from-list-of-tuples-of-row-col-values
-# https://stackoverflow.com/questions/52643775/how-to-replace-specific-character-in-pandas-column-with-null
-# https://www.geeksforgeeks.org/split-a-text-column-into-two-columns-in-pandas-dataframe/
-# https://datatofish.com/read_excel/
-# https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.merge.html
-# https://stackoverflow.com/questions/41815079/pandas-merge-join-two-data-frames-on-multiple-columns
-# https://stackoverflow.com/questions/18250298/how-to-check-if-a-value-is-in-the-list-in-selection-from-pandas-data-frame
-# https://stackoverflow.com/questions/18265935/how-do-i-create-a-list-with-numbers-between-two-values
-# https://stackoverflow.com/questions/16729574/how-can-i-get-a-value-from-a-cell-of-a-dataframe
-# https://www.census.gov/data/tables/time-series/demo/voting-and-registration/p20-585.html
-# https://matplotlib.org/stable/tutorials/intermediate/legend_guide.html
-# https://matplotlib.org/stable/gallery/text_labels_and_annotations/custom_legends.html
-# https://stackoverflow.com/questions/22642511/change-y-range-to-start-from-0-with-matplotlib
-# https://www.folkstalk.com/2022/10/python-legend-being-cut-off-with-code-examples.html
-# https://stackoverflow.com/questions/25146121/extracting-just-month-and-year-separately-from-pandas-datetime-column
-# https://www.geeksforgeeks.org/python-program-to-perform-cross-join-in-pandas/
-# https://shiny.rstudio.com/py/docs/ui-page-layouts.html
-# https://medium.com/swlh/quick-text-pre-processing-c444f0ed9dcc
-# https://shiny.rstudio.com/py/api/
-# https://stackoverflow.com/questions/12201928/open-gives-filenotfounderror-ioerror-errno-2-no-such-file-or-directory
-# https://medium.com/dataseries/how-to-scrape-millions-of-tweets-using-snscrape-195ee3594721
-
 import pandas as pd
 import os
 import statsmodels.formula.api as smf

@@ -1,13 +1,10 @@
-# Data and Programming for Public Policy II - Python Programming
-# PPHA 30538
 
+## Exploring Relationships Between Voter Turnout, College Enrollment, and the Economy
 
-## Final Project: Reproducible Research
-## Autumn 2022
-## Authors: Olivia Gunther, Sarah Lueling, & Sarah Scott
-## Final Github Repo Name: final-project-college-enrollment-political-parties
+# Authors: Olivia Gunther, Sarah Lueling, & Sarah Scott
+# Created Autumn 2022 for Data and Programming for Public Policy II - Python Programming Final Project
 
-Our project idea was inspired by the recent midterm elections and the current state of the U.S. economy. 
+Our project idea was inspired by the 2022 midterm elections and the current state of the U.S. economy. 
 In summer and fall of 2022, against the backdrop of a looming recession,
 many political campaigns focused on Get Out The Vote efforts among college-aged students. 
 For our research project, we asked: How do economic measures (specifically GDP,
@@ -15,16 +12,15 @@ unemployment rates, and recessions) affect voter turnout rates and student enrol
 Because of how polarized American politics has become in recent years, we also
 factored in the president’s party affiliation to see how this affected outcomes. 
 
-In order to answer our research question, we used data from a number of different sources.
-We relied heavily on data from the FRED database, pulled using an API, which provided us
-with information on historic GDP and unemployment rates in the U.S. from 2000-2020. We 
-also imported a csv file with college student enrollment data, specifically for Title IV
-institutions from the National Center for Education Statistics (Dept. of Ed) for 2000-2020.
-For voter turnout data, we used Census Bureau data that disaggregated voting turnout numbers
-by different demographics, which allowed us to focus on college-aged students (18-24 year olds).
-Finally, we scraped a simple Wikipedia page listing all the U.S. presidents, their party affiliation,
-and their presidential term start and end dates. The clean and reshaped versions of these datasets
-were the foundation of all of our static plots. 
+In order to answer our research question, we used data from a number of different sources: 
+ - historic GDP and unemployment rates in the U.S. from 2000-2020, scrapped using FRED API
+ - college student enrollment data, specifically for Title IV institutions, downloaded from
+   the National Center for Education Statistics (Dept. of Ed) for 2000-2020.
+ - voter turnout and registration data disaggregated by age, downloaded from the U.S. Census Bureau
+ - basic information on U.S. presidents, including term dates and party affiliation, scrapped using 
+   Beautiful Soup from Wikipedia. 
+ 
+The clean and reshaped versions of these datasets were the foundation of all of our static plots. 
 
 Our visualizations allowed us to analyze various relationships and trends between 
 different combinations of our data. Because we had numerous variables, the biggest
