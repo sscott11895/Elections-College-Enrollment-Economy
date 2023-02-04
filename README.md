@@ -19,13 +19,13 @@ factored in the president’s party affiliation to see how this affected outcome
 
 ### Data Scraping and Cleaning
 In order to answer our research question, we used data from a number of different sources: 
- - historic GDP and unemployment rates in the U.S. from 2000-2020, scrapped using the [FRED API](https://fred.stlouisfed.org/) 
+ - historic GDP and unemployment rates in the U.S. from 2000-2020, scrapped using the [FRED API](https://fred.stlouisfed.org/). 
  - college student enrollment data, specifically for Title IV institutions, downloaded from
-   the National Center for Education Statistics (Dept. of Ed) for 2000-2020.
- - voter turnout and registration data disaggregated by age, downloaded from the [U.S. Census Bureau](https://www.census.gov/data/tables/time-series/demo/voting-and-registration/p20-585.html)
+   the [National Center for Education Statistics](https://nces.ed.gov/ipeds/TrendGenerator/app/answer/2/2) (Dept. of Ed) for 2000-2020.
+ - voter turnout and registration data disaggregated by age, downloaded from the [U.S. Census Bureau](https://www.census.gov/data/tables/time-series/demo/voting-and-registration/p20-585.html).
  - basic information on U.S. presidents, including term dates and party affiliation, scrapped using 
    BeautifulSoup from [Wikipedia](https://en.wikipedia.org/wiki/List_of_presidents_of_the_United_States).
- - twitter data from Joe Biden and [Donald Trump](https://www.thetrumparchive.com/)
+ - twitter data from Joe Biden and [Donald Trump](https://www.thetrumparchive.com/).
  
 The clean and reshaped versions of these datasets were the foundation of all of our static plots. 
 All data manipulation code can be found in the python file [1. Data Scraping and Cleaning.py](https://github.com/sscott11895/Elections-College-Enrollment-Economy/blob/main/1.%20Data%20Scraping%20%26%20Cleaning.py)
