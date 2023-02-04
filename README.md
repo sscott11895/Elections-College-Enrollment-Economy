@@ -14,6 +14,9 @@ unemployment rates, and recessions) affect voter turnout rates and student enrol
 Because of how polarized American politics has become in recent years, we also
 factored in the president’s party affiliation to see how this affected outcomes. 
 
+*Note: All images below can be found in the [Figures](https://github.com/sscott11895/Elections-College-Enrollment-Economy/tree/main/Figures) folder.*
+*All raw data files are in the folder *Raw Data*.*
+
 ### Data Scraping and Cleaning
 In order to answer our research question, we used data from a number of different sources: 
  - historic GDP and unemployment rates in the U.S. from 2000-2020, scrapped using the [FRED API](https://fred.stlouisfed.org/) 
@@ -22,9 +25,10 @@ In order to answer our research question, we used data from a number of differen
  - voter turnout and registration data disaggregated by age, downloaded from the [U.S. Census Bureau](https://www.census.gov/data/tables/time-series/demo/voting-and-registration/p20-585.html)
  - basic information on U.S. presidents, including term dates and party affiliation, scrapped using 
    BeautifulSoup from [Wikipedia](https://en.wikipedia.org/wiki/List_of_presidents_of_the_United_States).
+ - twitter data from Joe Biden and [Donald Trump](https://www.thetrumparchive.com/)
  
 The clean and reshaped versions of these datasets were the foundation of all of our static plots. 
-All raw data files are in the folder *Raw Data*. All data manipulation is found in the python file 1. Data Scraping and Cleaning.py.
+All data manipulation code can be found in the python file [1. Data Scraping and Cleaning.py](https://github.com/sscott11895/Elections-College-Enrollment-Economy/blob/main/1.%20Data%20Scraping%20%26%20Cleaning.py)
 
 ### Data Visualizations
 Visualizations allowed us to analyze various relationships and trends between 
@@ -73,6 +77,7 @@ presidential political parties in their respective tabs. The user is invited to 
 data in this way, layer by layer, considering the relationships between the data before diving 
 into an OLS model later in the project. We spent time making sure this Shiny app was visually 
 appealing and intuitive to a user through its structure and layout.
+All data vizualization code is found in the python file [2. Plotting.py](https://github.com/sscott11895/Elections-College-Enrollment-Economy/blob/main/2.%20Plotting.py).
 
 
 ### Twitter Scraping 
@@ -80,23 +85,22 @@ appealing and intuitive to a user through its structure and layout.
 To complement our static plots and Shiny website, we focused on data from the most 
 recent presidential election in 2020. Specifically, we scraped Twitter data from 
 October 2020 for both the Republican presidential candidate, Donald Trump, and from the 
-Democratic presidential candidate, Joe Biden. Because the outcome of this election proved 
+Democratic presidential candidate, Joe Biden, using snscrape. Because the outcome of this election proved 
 to be extremely close and because both candidates relied heavily on Twitter data, we wanted 
 to use natural language processing to analyze their social media messages in the month leading up 
 to the election. The end product was to create visuals that show the top 15 words that each candidate 
 used during this time period. 
 
-We ran into three major challenges during the text processing section. One was figuring 
-out a way to scrape Twitter data. Because Twitter sells their data, they rarely allow 
-people to scrape unlimited information from their site. As such, different packages have 
-been developed to address this issue. We specifically used the package “snscrape”. Another 
-challenge was the inability to scrape Donald Trump's Twitter data. In January 2020, Donald Trump 
-was banned from Twitter due to violating their ethics policies. We had to use a different archival 
-website in order to scrape his tweets from this time period. In addition, preprocessing the text 
-required a lot of work. In this case, it matters which order the cleaning is performed in, 
-i.e. cleaning symbols before cleaning URLs will result in faulty results. 
-After a lot of experimenting, it worked out well in the end.
+Note that because in January 2020, Donald Trump was banned from Twitter due to violating their ethics policies. 
+We had to use a [different archival website](https://www.thetrumparchive.com/) in order to scrape his tweets from this time period. 
 
+![Word Frequency Distribution for Donald Trump](https://github.com/sscott11895/Elections-College-Enrollment-Economy/blob/main/Figures/Word%20Frequency%20Distribution%20for%20Donald%20Trump.png)
+
+
+![Word Frequency Distribution for Joe Biden](https://github.com/sscott11895/Elections-College-Enrollment-Economy/blob/main/Figures/Word%20Frequency%20Distribution%20for%20Joe%20Biden.png)
+
+
+All Twitter Scraping and Visualization code is found in the python file [3. Twitter Word Modeling.py](https://github.com/sscott11895/Elections-College-Enrollment-Economy/blob/main/3.%20Twitter%20Word%20Modeling.py).
 
 ### Analysis
 
@@ -110,6 +114,10 @@ There was no statistically significant relationship between unemployment rates a
 For student enrollment rates, there were no statistically significant relationships between 
 this measure and any of the control variables. 
 
+All Analysis Code can be found in the python file [4. Analysis.py](https://github.com/sscott11895/Elections-College-Enrollment-Economy/blob/main/4.%20Analysis.py).
+
+
+### Limitations
 There were a number of limitations with our model. The first is that our model was 
 fitted using very few data points. Due to data quality issues, we chose to only pull 
 student enrollment data, GDP and unemployment data, and presidential data from 2000-2020. 
@@ -119,6 +127,6 @@ between our data. Furthermore, an OLS model automatically assumes that there is 
 between the independent and dependent variables. This may not be the case for some of these metrics. 
 For example, we can imagine that voter turnout rates and GDP have a logarithmic relationship, where 
 voter rates initially rise with GDP but then taper out at a certain level of economic development. 
-In the future, making sure to  longevity of the model is very important. 
-
+In future iterations of this project, we would focus additional time on data cleaning at the outset
+to ensure we have enough data to train a model. 
 
