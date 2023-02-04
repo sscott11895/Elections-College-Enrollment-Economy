@@ -1,8 +1,8 @@
 
-## Exploring Relationships Between Voter Turnout, College Enrollment, and the Economy
+# Exploring Relationships Between Voter Turnout, College Enrollment, and the Economy
 
-# Authors: Olivia Gunther, Sarah Lueling, & Sarah Scott
-# Created Autumn 2022 for Data and Programming for Public Policy II - Python Programming Final Project
+### Authors: Olivia Gunther, Sarah Lueling, & Sarah Scott
+### Created Autumn 2022 for Data and Programming for Public Policy II - Python Programming Final Project
 
 Our project idea was inspired by the 2022 midterm elections and the current state of the U.S. economy. 
 In summer and fall of 2022, against the backdrop of a looming recession,
@@ -12,6 +12,7 @@ unemployment rates, and recessions) affect voter turnout rates and student enrol
 Because of how polarized American politics has become in recent years, we also
 factored in the president’s party affiliation to see how this affected outcomes. 
 
+#### Data Scraping and Cleaning
 In order to answer our research question, we used data from a number of different sources: 
  - historic GDP and unemployment rates in the U.S. from 2000-2020, scrapped using FRED API
  - college student enrollment data, specifically for Title IV institutions, downloaded from
@@ -21,24 +22,50 @@ In order to answer our research question, we used data from a number of differen
    Beautiful Soup from Wikipedia. 
  
 The clean and reshaped versions of these datasets were the foundation of all of our static plots. 
+All raw data files are in the folder *Raw Data*. All data manipulation is found in the python file 1. Data Scraping and Cleaning.py.
 
-Our visualizations allowed us to analyze various relationships and trends between 
+#### Data Visualizations
+Visualizations allowed us to analyze various relationships and trends between 
 different combinations of our data. Because we had numerous variables, the biggest
 challenge was deciding which combination of metrics would best illustrate the relationships
 we were interested in. We ultimately decided to have one static plot that compared GDP to 
-unemployment rates. Because these were controls for both of our OLS statistical models, we 
+unemployment rates. 
+
+#### plot 
+
+Because these were controls for both of our OLS statistical models, we 
 wanted to see how they related to each other. We also included recession data in this plot 
-to highlight any strange economic happenings during low times. Secondly, we looked at college 
-student enrollment data and how this was affected by recessions in another static plot. As 
+to highlight any strange economic happenings during low times. 
+
+Secondly, we looked at college student enrollment data and how this was affected by recessions in another static plot. As 
 expected based on economic literature, recessions are associated with higher rates of college 
-student enrollment. Our third static graph looked at how voter turnout was affected by the 
-presidential party in power. Lastly, we looked at voter turnout rates vs. unemployment rates. 
+student enrollment. 
+
+
+
+
+
+Our third static graph looked at how voter turnout was affected by the 
+presidential party in power. Lastly, we looked at voter turnout rates vs. unemployment rates.
+
+
+
+
+
+ 
 These last two plots seek to understand, in a basic way, if there are any noticeable trends in 
 those relationships that lend themselves to voting motivations: disagreement with the party in 
 power or dissatisfaction with the economy.
 	
 Our Shiny app offered us a quick interactive approach to look at changes in GDP and unemployment 
-rate over time based on recession data and political party data. We organized our two interactive 
+rate over time based on recession data and political party data. 
+
+
+
+
+
+
+We organized our two interactive 
 plots by tabs that focus on recession impacts and political party impacts. Within each tab, the 
 user can select the economic measure they want to look at (GDP or unemployment rate), and if 
 they wish to display shadowing on the plot. These shadows represent recession dates and 
@@ -46,6 +73,9 @@ presidential political parties in their respective tabs. The user is invited to 
 data in this way, layer by layer, considering the relationships between the data before diving 
 into an OLS model later in the project. We spent time making sure this Shiny app was visually 
 appealing and intuitive to a user through its structure and layout.
+
+
+#### Twitter Scraping 
 
 To complement our static plots and Shiny website, we focused on data from the most 
 recent presidential election in 2020. Specifically, we scraped Twitter data from 
@@ -66,6 +96,9 @@ website in order to scrape his tweets from this time period. In addition, prepro
 required a lot of work. In this case, it matters which order the cleaning is performed in, 
 i.e. cleaning symbols before cleaning URLs will result in faulty results. 
 After a lot of experimenting, it worked out well in the end.
+
+
+#### Analysis
 
 We used a basic OLS regression model to predict both voter turnout numbers 
 and college student enrollment rates (holding GDP, unemployment rate, and 
